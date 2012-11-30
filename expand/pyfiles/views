@@ -1,0 +1,29 @@
+# coding: utf-8
+from django.views import generic
+from django.core.urlresolvers import reverse
+from $APP import models
+
+
+class $MODELListView(generic.ListView):
+    model = models.$MODEL
+
+
+class $MODELDetailView(generic.DetailView):
+    model = models.$MODEL
+
+
+class $MODELCreateView(generic.CreateView):
+    model = models.$MODEL
+    template_name = "$APP/$LOWERMODEL_create.html"
+
+
+class $MODELUpdateView(generic.UpdateView):
+    model = models.$MODEL
+    template_name = "$APP/$LOWERMODEL_update.html"
+
+
+class $MODELDeleteView(generic.DeleteView):
+    model = models.$MODEL
+
+    def get_success_url(self):
+    	return reverse("$LOWERAPP_$LOWERMODEL_list")

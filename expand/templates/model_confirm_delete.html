@@ -1,0 +1,17 @@
+{% extends '$APP/$MODEL_base.html' %}
+
+{% load url from future %}
+
+{% block extra_head %}{% endblock %}
+
+{% block content %}
+	<div>
+		<a href="{% url '$APP_$MODEL_list' %}">back to $MODEL list</a>
+		<a href="{% url '$APP_$MODEL_detail' pk=object.pk %}">back to $MODEL instance</a>
+	</div>
+	<form method="post" action="">
+		{% csrf_token %}
+		<p>Are you sure you want to delete $MODEL instance {{object}}</p>
+		<button type="submit">Yes</button>
+	</form>
+{% endblock %}

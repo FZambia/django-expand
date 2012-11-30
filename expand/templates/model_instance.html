@@ -1,0 +1,7 @@
+{% load url from future %}
+
+<div>
+	<a href="{% url '$APP_$MODEL_detail' pk=object.pk %}">{{object}}</a>
+	<a href="{% url '$APP_$MODEL_update' pk=object.pk %}">Edit</a>
+	<a href="{% url '$APP_$MODEL_delete' pk=object.pk %}">Delete</a>
+</div>

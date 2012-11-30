@@ -1,0 +1,12 @@
+{% extends '$APP/$MODEL_base.html' %}
+
+{% load url from future %}
+
+{% block extra_head %}{% endblock %}
+
+{% block content %}
+	<div>
+		<a href="{% url '$APP_$MODEL_list' %}">back to $MODEL list</a>
+	</div>
+	{% include '$APP/$MODEL_instance.html' %}
+{% endblock %}
