@@ -5,8 +5,8 @@ If you tired to create template files, views etc from scratch every time you cre
 
 Django-expand provides:
 
-* rest templates
-* rest views
+* templates
+* views
 * urls
 * forms
 
