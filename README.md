@@ -13,15 +13,15 @@ Django-expand provides:
 Using
 -----
 
-1. Install:
+ 1. Install:
 
 ```bash
 pip install git+git://github.com/FZambia/django-expand.git
 ```
 
-2. Add `'expand'` in INSTALLED_APPS
+ 2. Add `'expand'` in INSTALLED_APPS
 
-3. Create new django model, ex class Contact in `contact` app:
+ 3. Create new django model, ex class Contact in `contact` app:
 
 ```python
 # contact/models.py
@@ -48,21 +48,21 @@ class Contact(models.Model):
 Note that get_absolute_url method is required and url name must be
 constructed from app_label and model_name as follows: "applabel_modelname_detail"
 
-4. Include urls in your application `urls.py`:
+ 4. Include urls in your application `urls.py`:
 
 ```python
 url(r'', include('contact.urls')),
 ```
 
-5. run manage.py command:
+ 5. run manage.py command:
 
 ```bash
 python manage.py expand --app=contact --model=Contact
 ```
 
-6. Open your browser - go to '/contact/' location and enjoy result!
+ 6. Open your browser - go to '/contact/' location and enjoy result!
 
-7. `--append` command line flag can help you to create anothe model from the same app.
+ 7. `--append` command line flag can help you to create anothe model from the same app.
 
 
 Limitations
