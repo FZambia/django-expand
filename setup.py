@@ -17,7 +17,7 @@ else:
 
 
 setup(
-    name="django-ease",
+    name="django-expand",
     version="0.1.0",
     author="Alexandr Emelin",
     author_email="frvzmb@gmail.com",

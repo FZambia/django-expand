@@ -54,6 +54,8 @@ constructed from app_label and model_name as follows: "applabel_modelname_detail
 url(r'', include('contact.urls')),
 ```
 
+* remove `views.py` file if it's empty yet.
+
 * run manage.py command:
 
 ```bash
@@ -62,7 +64,7 @@ python manage.py expand --app=contact --model=Contact
 
 * Open your browser - go to '/contact/' location and enjoy result!
 
-* `--append` command line flag can help you to create anothe model from the same app.
+* `--append` command line flag can help you to create another model from the same app.
 
 
 Limitations
